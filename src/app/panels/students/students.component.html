@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="h1">Students List</h1>
+        <input type="button" value="Create Student" [routerLink]="['/students/add-student']" class="btn">
+        <br><br>
+        <table class="table table-striped table-bordered">
+          <thead class="thead-dark">
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>username</th>
+            <th>password</th>
+            <th colspan="3" style="text-align:center">Options</th>
+  
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let student of arrStudents">
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.username}}</td>
+            <td>{{student.password}}</td>
+            <td><button class="btn btn-warning" (click)="editUser(student.id)">Edit student</button></td>
+            <td><input type="button" value="Set Mark" [routerLink]="['/students/set-mark']" class="btn btn-warning"></td>
+            <td><button class="btn btn-danger" (click)="deleteUser(student.id)">Delete User</button></td>
+  
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <router-outlet></router-outlet>

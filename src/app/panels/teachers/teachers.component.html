@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="h1">teacher List</h1>
+      <input type="button" value="Create Teacher" [routerLink]="['/teachers/add-teacher']" class="btn">
+        <!-- <button class="btn" (click)="componentInsideModal.open()">Create Teacher</button> -->
+        <!-- <modal #componentInsideModal>
+          <ng-template #modalHeader><h2>Create Teacher</h2></ng-template>
+          <ng-template #modalBody>
+            <app-add-teacher></app-add-teacher>
+          </ng-template>
+          <ng-template #modalFooter></ng-template>
+        </modal> -->
+        <br><br>
+      <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>username</th>
+          <th>password</th>
+          <th colspan="3" style="text-align:center">Options</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let teacher of arrTeachers">
+          <td>{{teacher.id}}</td>
+          <td>{{teacher.name}}</td>
+          <td>{{teacher.username}}</td>
+          <td>{{teacher.password}}</td>
+          <td><button class="btn btn-warning" (click)="editUser(teacher.id)">Edit User</button></td>
+          <td><button class="btn btn-warning" (click)="changePass(teacher.id)">Change password</button></td>
+          <td><button class="btn btn-danger" (click)="deleteUser(teacher.id)">Delete User</button></td>
+
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

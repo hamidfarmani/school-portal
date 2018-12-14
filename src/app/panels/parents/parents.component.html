@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12" >
+        <h1 class="h1">Parents List</h1>
+        <table class="table table-striped table-bordered">
+          <thead class="thead-dark">
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>student</th>
+            <th>username</th>
+            <th>password</th>
+            <th>phone number</th>
+            <th colspan="3" style="text-align:center">Options</th>
+  
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let parent of arrParents">
+            <td>{{parent.id}}</td>
+            <td>{{parent.name}}</td>
+            <td>{{parent.studentid.name}}</td>
+            <td>{{parent.username}}</td>
+            <td>{{parent.password}}</td>
+            <td>{{parent.phonenumber}}</td>
+            <td><button class="btn btn-warning" (click)="editUser(teacher.id)">Edit User</button></td>
+            <td><button class="btn btn-warning" (click)="changePass(teacher.id)">Change password</button></td>
+            <td><button class="btn btn-danger" (click)="deleteUser(teacher.id)">Delete User</button></td>
+  
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <router-outlet></router-outlet>

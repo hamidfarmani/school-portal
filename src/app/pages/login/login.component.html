@@ -1,0 +1,27 @@
+<div class="wrapper signin-content card">
+    <form>   
+      
+        <div class="form-group full-width-input">
+          <label for="username">Username:</label>
+         <input [(ngModel)]="username" placeholder="username" name="username" class="form-control" id="username">
+        </div>
+        
+        <div class="form-group full-width-input">
+          <label for="password">Password:</label>
+         <input type="password" [(ngModel)]="password" placeholder="password" name="password" class="form-control" id="password">
+        </div>
+        <div class="form-group full-width-input">
+          <mat-radio-group name="radgp" class="example-radio-group" [(ngModel)]="selectedType">
+            <mat-radio-button name="radb" class="example-radio-button" 
+              *ngFor="let type of types"  [value]="type" >
+                {{type}}
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+      
+        <div class="form-group full-width-input">
+        <button type= "button" class="btn btn-success" (click)="login()">Login</button>
+      </div>
+      </form>
+</div>
+<router-outlet></router-outlet>

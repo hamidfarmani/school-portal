@@ -1,0 +1,46 @@
+<div class="wrapper" >
+  <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>School Portal</h3>
+            <h5>Welcome {{loginedUser.name}}</h5>
+        </div>
+
+    <ul class="list-unstyled components">
+        <li>
+            <a routerLink="/lessongroups" routerLinkActive="active-link" >Lesson Group</a>
+        </li>
+        <li>
+            <a routerLink="/lessons" routerLinkActive="active-link" >Lessons</a>
+        </li>
+        <li>
+            <a routerLink="/teachers" routerLinkActive="active-link" >Teachers</a>
+        </li>
+        <li>
+           <a routerLink="/studentgroups" routerLinkActive="active-link" >Student Group</a>
+        </li>
+        <li>
+            <a routerLink="/students" routerLinkActive="active-link" >Students</a>
+        </li>
+        <li>
+            <a routerLink="/parents" routerLinkActive="active-link" >Parents</a>
+        </li>
+        <li>
+            <a routerLink="/classrooms" routerLinkActive="active-link" >Class rooms</a>
+        </li>
+        <li>
+            <a routerLink="/timetables" routerLinkActive="active-link" >Timetable</a>
+        </li>
+        <li>
+            <a class="btn" (click)="onLogout()">Logout</a>
+        </li>
+
+    </ul>
+</nav>
+
+  <!-- Page Content  -->
+    <div id="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
