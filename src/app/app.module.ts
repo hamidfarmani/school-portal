@@ -36,7 +36,6 @@ import { SetMarkComponent } from './panels/students/mark/set-mark/set-mark.compo
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthService } from './auth/auth.service';
-import { HomeLayoutComponent } from './layouts/home-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout.component';
 import { MatRadioModule } from '@angular/material/radio';
 
@@ -59,7 +58,6 @@ import { MatRadioModule } from '@angular/material/radio';
     ClassRoomsComponent,
     timetableComponent,
     AddTimetableComponent,
-    HomeLayoutComponent,
     LoginLayoutComponent
   ],
   imports: [
